@@ -1,0 +1,32 @@
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #3199b3;
+    text-align: center;
+    padding: 50px;
+}
+select,button{
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+}q
+.weather-box{
+    margin-top: 30px;
+    background: rgb(248, 246, 246);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.icon{
+    width: 80px;
+    margin: 10px 0;
+}
+.temp{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.desc{
+    color: #100f0f;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif solid;
+    font-size: 10px;
+}
