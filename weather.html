@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather</title>
+</head>
+<body>
+    <a href="index.html">⬅️Back</a>
+    <h1>City Weather</h1>
+    <div id="weatherBox" class="weather-box" style="display: none;">
+        <h2 id="cityName"></h2>
+        <img id="icon" class="icon" src="" alt="Icon" />
+        <p id="temp" class="temp"></p>
+        <p id="desc" class="desc"></p>
+    </div>
+    <script src="data.js"> </script>
+    <script>
+        const city = localStorage.getItem("selectedCity");
+        const weather = WeatherData[city];
+
+        if(weather){
+            document.getElementById("cityName").innerText = city;
+            document.getElementById("icon").src = weather.icon;
+            document.getElementById("icon").alt = weather.description;
+            document.getElementById("temp").innerText = `${weather.temp} °C`;
+            document.getElementById("desc").innerText = weather.description;
+            document.getElementById("weatherBox").style.display = "block";
+        } else {
+            document.body.innerHTML = "<h3>No data found. Please go back and select a city.</h3>";
+        }
+    </script>
+</body>
+</html>
